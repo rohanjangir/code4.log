@@ -1,0 +1,263 @@
+function add(x,y){
+return x+y;
+}
+
+undefined
+var add=(x,y)=>x+y;
+undefined
+add();
+NaN
+add(10,20);
+30
+var arr=[10,20,30,40,50,60];
+undefined
+arr;
+(6) [10, 20, 30, 40, 50, 60]
+for(let i=0; i<arr.length; i++){
+console.log(arr(i));
+}
+VM410:2 Uncaught TypeError: arr is not a function
+    at <anonymous>:2:13
+(anonymous) @ VM410:2
+for(let i=0; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM430:2 10
+VM430:2 20
+VM430:2 30
+VM430:2 40
+VM430:2 50
+VM430:2 60
+undefined
+for(let a of arr)
+{
+console.log(a);
+}
+VM488:3 10
+VM488:3 20
+VM488:3 30
+VM488:3 40
+VM488:3 50
+VM488:3 60
+undefined
+function printIt(ele){
+console.log("Data is",ele);
+}
+undefined
+printIt();
+VM559:2 Data is undefined
+undefined
+printIt(10);
+VM559:2 Data is 10
+undefined
+function printIt(ele){
+console.log("Data is",ele);
+}
+arr.forEach(printIt);
+VM629:2 Data is 10
+VM629:2 Data is 20
+VM629:2 Data is 30
+VM629:2 Data is 40
+VM629:2 Data is 50
+VM629:2 Data is 60
+undefined
+function forEach(fn){
+for(let i=1; i<=10; i++)
+}
+forEach(printIt);
+VM747:3 Uncaught SyntaxError: Unexpected token }
+function forEach(fn){
+for(let i=1; i<=10; i++){
+fn(i); // call
+}
+}
+forEach(printIt); // CallBack
+VM629:2 Data is 1
+VM629:2 Data is 2
+VM629:2 Data is 3
+VM629:2 Data is 4
+VM629:2 Data is 5
+VM629:2 Data is 6
+VM629:2 Data is 7
+VM629:2 Data is 8
+VM629:2 Data is 9
+VM629:2 Data is 10
+undefined
+arr.forEach(ele=>console.log('My Data is',ele);
+VM897:1 Uncaught SyntaxError: missing ) after argument list
+arr.forEach(ele=>console.log('My Data is',ele));
+VM902:1 My Data is 10
+VM902:1 My Data is 20
+VM902:1 My Data is 30
+VM902:1 My Data is 40
+VM902:1 My Data is 50
+VM902:1 My Data is 60
+undefined
+arr;
+(6) [10, 20, 30, 40, 50, 60]
+arr.find(ele=>ele==20);
+20
+arr.find(ele=>ele==20,40);
+20
+arr.find(ele=>ele==40);
+40
+arr.findIndex(ele=>ele==40);
+3
+arr.findIndex(ele=>ele==30);
+2
+arr;
+(6) [10, 20, 30, 40, 50, 60]
+arr.splice(1);
+(5) [20, 30, 40, 50, 60]
+arr;
+[10]
+var arr=[10,20,30,40,50,60];
+undefined
+arr;
+(6) [10, 20, 30, 40, 50, 60]
+arr.splice(0);
+(6) [10, 20, 30, 40, 50, 60]
+arr;
+[]
+var arr=[10,20,30,40,50,60];
+undefined
+arr.splice(1,1);
+[20]
+arr;
+(5) [10, 30, 40, 50, 60]
+arr.findIndex(ele=>ele==10);
+0
+arr.findIndex(ele=>ele==5);
+-1
+arr.splice(arr.findIndex(ele=>ele==30),10);
+(4) [30, 40, 50, 60]
+arr;
+[10]
+arr[0]=1000;
+1000
+arr;
+[1000]
+var index=arr.findIndex(ele=>ele==20000);
+undefined
+index>=0?arr.splice(index,1):"No Record Found";
+"No Record Found"
+var index=arr.findIndex(ele=>ele==1000);
+undefined
+index>=0?arr.splice(index,1):"No Record Found";
+[1000]
+arr;
+[]
+arr=[10,20,10,10,90,10,100];
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr.find(ele=>ele==10);
+10
+arr.findIndex(ele=>ele==10);
+0
+arr.filter(ele=>ele==10);
+(4) [10, 10, 10, 10]
+var sub=arr.filter(ele=>ele==20);
+undefined
+sub;
+[20]
+var sub=arr.filter(ele=>ele>=20);
+undefined
+sub;
+(3) [20, 90, 100]
+sub.forEach(e=>console.log(e));
+VM2094:1 20
+VM2094:1 90
+VM2094:1 100
+undefined
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+vat t=arr.filter(y=>true);
+VM2144:1 Uncaught SyntaxError: Unexpected identifier
+vat t=arr.filter(t=>true);
+VM2162:1 Uncaught SyntaxError: Unexpected identifier
+var t=arr.filter(y=>true);
+undefined
+t;
+(7) [10, 20, 10, 10, 90, 10, 100]
+vat t=arr.filter(y=>1==1);
+VM2246:1 Uncaught SyntaxError: Unexpected identifier
+var t=arr.filter(y=>1==1);
+undefined
+t;
+(7) [10, 20, 10, 10, 90, 10, 100]
+function add(a,b){
+return a+b;
+}
+undefined
+add();
+NaN
+function add(a,b){
+if(a && b){
+return a+b;
+}
+return 0;
+}
+undefined
+add();
+0
+add(1,2);
+3
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr.filter(ele=>ele==10);
+(4) [10, 10, 10, 10]
+arr.filter(ele=>ele!=10);
+(3) [20, 90, 100]
+arr=arr.filter(ele=>ele!=10);
+(3) [20, 90, 100]
+arr;
+(3) [20, 90, 100]
+arr=[10,20,10,10,90,10,100];
+(7) [10, 20, 10, 10, 90, 10, 100]
+arrl
+VM2568:1 Uncaught ReferenceError: arrl is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2568:1
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr=arr.filter(ele=>ele==10).length;
+4
+arr;
+4
+arr.push(1000);
+VM2639:1 Uncaught TypeError: arr.push is not a function
+    at <anonymous>:1:5
+(anonymous) @ VM2639:1
+arr=[10,20,10,10,90,10,100];
+(7) [10, 20, 10, 10, 90, 10, 100]
+arrl
+VM2712:1 Uncaught ReferenceError: arrl is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2712:1
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr.filter(ele=>ele==10).length;
+4
+arr;
+(7) [10, 20, 10, 10, 90, 10, 100]
+arr.push(1000);
+8
+arrl
+VM2791:1 Uncaught ReferenceError: arrl is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2791:1
+arr;
+(8) [10, 20, 10, 10, 90, 10, 100, 1000]
+var tt=arr.map(y=>y**3);
+undefined
+tt;
+(8) [1000, 8000, 1000, 1000, 729000, 1000, 1000000, 1000000000]
+var t1=arr.map(y=>y);
+undefined
+t1;
+(8) [10, 20, 10, 10, 90, 10, 100, 1000]
+var t1=arr.map(y=>"$"+y+".00");
+undefined
+t1;
+(8) ["$10.00", "$20.00", "$10.00", "$10.00", "$90.00", "$10.00", "$100.00", "$1000.00"]
